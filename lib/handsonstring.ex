@@ -13,8 +13,7 @@ defmodule Handsonstring do
   end
 
  @doc """
-   ## String basic operations
-  Build a module to sort a string. If you have a lot of 
+   ## Build a function to sort a string. If you have a lot of 
   functions to apply, you can use the pipe operator |> .
   You should: convert the string to downcase, split the string into
   graphemes to sort those graphemes.
