@@ -1,7 +1,5 @@
 defmodule HandsonstringTest do
   use ExUnit.Case
-  import ExUnit.CaptureIO
-  import ExUnit.CaptureLog
 
   doctest Handsonstring
 
