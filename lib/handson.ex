@@ -19,5 +19,6 @@ defmodule Handson do
     :world
   end
 
+IO.puts "Hello world from Elixir"
 
 end
