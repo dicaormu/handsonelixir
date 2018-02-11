@@ -25,3 +25,5 @@ handson-*.tar
 .formatter.exs
 
 *.beam
+
+.DS_Store
