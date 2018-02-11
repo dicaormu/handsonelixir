@@ -33,7 +33,7 @@ defmodule Handsonfor do
 
   def findMultiples(num1, num2) do
     
-    # use something of type [head|tail ] and return tail
+    # TODO use something of type [head|tail ] and return tail
     
   end
 
@@ -46,7 +46,7 @@ defmodule Handsonfor do
 
   def generateListCombination(list1, list2) do
     
-    # return something of type {rank, suit}
+    # TODO return something of type {rank, suit}
   end
 
 
@@ -58,8 +58,8 @@ defmodule Handsonfor do
   """
 
   def computePrice(prices, cart) do
-    
-    # Enum.sum(pr)
+    # TODO compute the price
+    # TODO sum values Enum.sum(pr)
   end
 
 
