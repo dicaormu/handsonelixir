@@ -10,7 +10,8 @@ defmodule Handsonecho do
    or __ENV__/0
    """
     def start_link do
-      pid = spawn_link(__MODULE__, :loop, [])
+      # TODO get the pid of the spawned process
+
       {:ok, pid}
 	end
 
@@ -31,8 +32,9 @@ defmodule Handsonecho do
    """
 	def loop do
     	receive do
-        	{msg, caller} when is_pid(caller) ->
-          	Kernel.send(caller, msg)
+          # TODO use pattern matching for the receiver, when the caller is a pid, call Kernell.send
+          	
+            Kernel.send(caller, msg)
           	loop()
 		end 
 	end

@@ -10,7 +10,7 @@ defmodule Handsonechotime do
    or __ENV__/0
    """
     def start_link do
-      pid = spawn_link(__MODULE__, :loop, [])
+      # TODO get the pid of the spawned process
       {:ok, pid}
 	end
 
@@ -35,9 +35,8 @@ defmodule Handsonechotime do
         	{msg, caller} ->
             Kernel.send(caller, msg)
             loop() 
-      after
-        10 ->
-          exit(:normal)
+      # TODO,  after 10 seconds exit
+      
 		end 
 	end
 end
