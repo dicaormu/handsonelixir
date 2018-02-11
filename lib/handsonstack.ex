@@ -16,7 +16,7 @@ defmodule Stack do
 
     ## PUBLIC - Client API
     def start_link(initial) do
-      GenServer.start_link(__MODULE__, initial)
+      # TODO start ling for the genserver
     end
 
 
@@ -25,7 +25,7 @@ defmodule Stack do
    	see Genserver cast and call functions. For this function we dont need a response back from the server.
    	"""
     def push(pid, element) do
-      GenServer.cast(pid, {:push, element})
+      # TODO use the method call or cast of the genserver
     end
     
 
@@ -34,7 +34,8 @@ defmodule Stack do
    	see Genserver cast and call functions. For this function we need a response back from the server.
    	"""
     def pop(pid) do
-      GenServer.call(pid, :pop)
+      # TODO use the method call or cast of the genserver
+      
     end
 
     ## Server CALLBACKS
@@ -53,20 +54,22 @@ defmodule Stack do
 	"""
 
     def handle_call(:pop, _from, []) do
-      {:reply, {:error, :empty}, []}
+      # TODO return :reply with a message {:error,:empty} et empty list
     end
 
     @doc """
 	The return value for our handle_call means reply with :ok and the head of the state (is a list, it should be something like {:ok,head}) and update the state, using only the tail
 	"""
     def handle_call(:pop, _from, [h | t]) do
-      {:reply, {:ok, h}, t}
+      # TODO retunr :reply, {:ok,head} and the queue tail
     end
 
 	@doc """
 	The return value for our handle_cast means noreply  and update the state by adding the new element 'el' to the front of the list.
 	"""
     def handle_cast({:push, el}, state) do
-      {:noreply, [el | state]}
+
+     # TODO return {:noreply, and add 'el' to the state}
+
     end
 end
