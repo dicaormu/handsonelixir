@@ -24,3 +24,4 @@ handson-*.tar
 
 .formatter.exs
 
+*.beam
