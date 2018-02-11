@@ -9,7 +9,7 @@ defmodule Handsonstring do
   """
 
   def binary(vall) do
-    vall <> <<0>>
+    # add <<0>> to the string
   end
 
  @doc """
@@ -22,7 +22,7 @@ defmodule Handsonstring do
   """
 
   def sort(string) do
-  	string |> String.downcase() |> String.graphemes() |> Enum.sort() |> to_string
+    # string + downcase + graphemes + sort + to string
   end
 
   def anagram(string1,string2) do

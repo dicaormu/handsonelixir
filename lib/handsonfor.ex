@@ -10,7 +10,7 @@ defmodule Handsonfor do
   """
 
   def addOne(list) do
-    for x <- list, do: x + 1
+    
   end
 
 
@@ -21,19 +21,20 @@ defmodule Handsonfor do
   """
 
   def addLists(num1, num2) do
-    for x <- 1..num1, y <- 1..num2, do: x * y
+    
   end
 
    @doc """
    ## list basic operations
   Build a function taking 2 integers generating one list from 1 to the integer 1 value, finding number multiples of the second number. Return all elements exept the first one.
   see comprehensions https://elixir-lang.org/getting-started/comprehensions.html
+  if needed you can create a function inside the function
   """
 
   def findMultiples(num1, num2) do
-    multiple_of_n? = fn(n) -> rem(n, num2) == 0 end
-    [h|t]=for x <- 1..num1, multiple_of_n?.(x) , do: x
-    t
+    
+    # use something of type [head|tail ] and return tail
+    
   end
 
 
@@ -44,9 +45,8 @@ defmodule Handsonfor do
   """
 
   def generateListCombination(list1, list2) do
-    for suit <- list1,
-          rank <- list2,
-          do: {rank, suit}
+    
+    # return something of type {rank, suit}
   end
 
 
@@ -58,13 +58,8 @@ defmodule Handsonfor do
   """
 
   def computePrice(prices, cart) do
-    pr = for item <- cart, 
-      {item_name, quant} <- item, # generator
-      (item_name in Keyword.keys prices), # filter
-      {name, price} <- prices, # generator 
-      item_name == name, # filter
-      do:  price * quant
-    Enum.sum(pr)
+    
+    # Enum.sum(pr)
   end
 
 
