@@ -1,13 +1,10 @@
 defmodule Handson do
   @moduledoc """
-  Documentation for Handson.
+  Hands on module.
   """
 
   @doc """
-  Hands on module.
-
-  ## String basic operations
-  Build a module for basic string operations
+  
 
   ## Examples
 
